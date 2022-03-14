@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Group" Category="EntityType" Annotations="Relational:TableName: Group RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="124.523366770898,311.819801967351,322.77,197.8804" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Group" Name="Group" />
+    <Node Id="Group.Description" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="144.523366770898,407.780051967351,80.2533333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Description" MaxLength="(100)" Name="Description" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Group.GroupId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValueSql: NEWID()" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="316.786700104231,351.819901967351,63.54,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="GroupId" MaxLength="None" Name="GroupId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Group.GroupToPermissions" Category="Navigation Collection" Bounds="284.360033437564,463.740101967351,142.933333333333,25.96" Dependent="GroupToPermission" Field="" Inverse="Group" Label="GroupToPermissions (*)" Name="GroupToPermissions" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;GroupToPermission&gt;" />
+    <Node Id="Group.GroupToRoles" Category="Navigation Collection" Bounds="254.776700104231,407.780001967351,109.09,25.96" Dependent="GroupToRole" Field="" Inverse="Group" Label="GroupToRoles (*)" Name="GroupToRoles" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;GroupToRole&gt;" />
+    <Node Id="Group.GroupToUsers" Category="Navigation Collection" Bounds="144.523366770898,463.740101967351,109.836666666667,25.96" Dependent="UserToGroup" Field="" Inverse="Group" Label="GroupToUsers (*)" Name="GroupToUsers" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;UserToGroup&gt;" />
+    <Node Id="Group.IsActive" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValue: True" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="226.220033437564,351.819901967351,60.5666666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="IsActive" MaxLength="None" Name="IsActive" PropertyAccessMode="PropertyAccessMode.Default" Type="bool?" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Group.Name" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="144.523366770898,351.819951967351,51.6966666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Name" MaxLength="(100)" Name="Name" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="GroupToPermission" Category="EntityType" Annotations="Relational:TableName: GroupToPermission RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="20.0000334375645,39.9998019673513,203.816666666667,197.8804" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="GroupToPermission" Name="GroupToPermission" />
+    <Node Id="GroupToPermission.Group" Category="Navigation Property" Bounds="133.540033437564,80.0000019673512,70.2766666666666,25.96" Dependent="" Field="" Inverse="GroupToPermissions" Label="Group (1)" Name="Group" Principal="Group" PropertyAccessMode="PropertyAccessMode.Default" Type="Group" />
+    <Node Id="GroupToPermission.GroupId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40.0000334375645,79.9999019673512,63.54,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="GroupId" MaxLength="None" Name="GroupId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="None" />
+    <Node Id="GroupToPermission.Permission" Category="Navigation Property" Bounds="40.0000334375646,191.920101967351,93.88,25.96" Dependent="" Field="" Inverse="PermissionToGroups" Label="Permission (1)" Name="Permission" Principal="Permission" PropertyAccessMode="PropertyAccessMode.Default" Type="Permission" />
+    <Node Id="GroupToPermission.PermissionId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40.0000334375644,135.960001967351,87.1433333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="PermissionId" MaxLength="None" Name="PermissionId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="None" />
+    <Node Id="GroupToRole" Category="EntityType" Annotations="Relational:TableName: GroupToRole RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="254.000033437564,67.9798519673512,203.816666666667,141.9203" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="GroupToRole" Name="GroupToRole" />
+    <Node Id="GroupToRole.Group" Category="Navigation Property" Bounds="367.540033437564,163.940001967351,70.2766666666667,25.96" Dependent="" Field="" Inverse="GroupToRoles" Label="Group (1)" Name="Group" Principal="Group" PropertyAccessMode="PropertyAccessMode.Default" Type="Group" />
+    <Node Id="GroupToRole.GroupId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="274.000033437564,163.940051967351,63.54,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="GroupId" MaxLength="None" Name="GroupId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="None" />
+    <Node Id="GroupToRole.Role" Category="Navigation Property" Bounds="357.300033437564,107.980001967351,60.0366666666667,25.96" Dependent="" Field="" Inverse="RoleToGroups" Label="Role (1)" Name="Role" Principal="Role" PropertyAccessMode="PropertyAccessMode.Default" Type="Role" />
+    <Node Id="GroupToRole.RoleId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="274.000033437564,107.979951967351,53.3,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="RoleId" MaxLength="None" Name="RoleId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="None" />
+    <Node Id="IModel" Category="Model" Annotations="BaseTypeDiscoveryConvention:DerivedTypes: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.List`1[Microsoft.EntityFrameworkCore.Metadata.IConventionEntityType]] Relational:MaxIdentifierLength: 128 RelationshipDiscoveryConvention:InverseNavigationCandidates: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.SortedSet`1[System.Type]] SqlServer:ValueGenerationStrategy: IdentityColumn" Bounds="3.34375645252294E-05,-0.000298032648743174,1545.96666666667,557.6807" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" Label="BlueprintContext" ProductVersion="6.0.2" PropertyAccessMode="PropertyAccessMode.Default" UseManualLocation="True" />
+    <Node Id="Permission" Category="EntityType" Annotations="Relational:TableName: Permission RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="477.841700104231,283.839801967351,336.133333333333,253.8405" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Permission" Name="Permission" />
+    <Node Id="Permission.Description" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="670.105033437564,323.839901967351,80.2533333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Description" MaxLength="(100)" Name="Description" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Permission.IsActive" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValue: True" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="579.538366770897,323.839901967351,60.5666666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="IsActive" MaxLength="None" Name="IsActive" PropertyAccessMode="PropertyAccessMode.Default" Type="bool?" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Permission.Name" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="497.841700104231,323.839901967351,51.6966666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Name" MaxLength="(100)" Name="Name" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Permission.Namespace" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="497.841700104231,379.800001967351,81.77,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Namespace" MaxLength="None" Name="Namespace" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Permission.PermissionId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValueSql: NEWID()" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="609.611700104231,379.800001967351,87.1433333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="PermissionId" MaxLength="None" Name="PermissionId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Permission.PermissionToGroups" Category="Navigation Collection" Bounds="497.841700104231,491.720201967351,142.933333333333,25.96" Dependent="GroupToPermission" Field="" Inverse="Permission" Label="PermissionToGroups (*)" Name="PermissionToGroups" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;GroupToPermission&gt;" />
+    <Node Id="Permission.PermissionToRoles" Category="Navigation Collection" Bounds="497.841700104231,435.760101967351,132.693333333333,25.96" Dependent="RoleToPermission" Field="" Inverse="Permission" Label="PermissionToRoles (*)" Name="PermissionToRoles" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;RoleToPermission&gt;" />
+    <Node Id="Permission.PermissionToUsers" Category="Navigation Collection" Bounds="660.535033437564,435.760001967351,133.44,25.96" Dependent="UserToPermission" Field="" Inverse="Permission" Label="PermissionToUsers (*)" Name="PermissionToUsers" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;UserToPermission&gt;" />
+    <Node Id="Role" Category="EntityType" Annotations="Relational:TableName: Role RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="844.016700104231,311.819801967351,311.783333333333,197.8804" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Role" Name="Role" />
+    <Node Id="Role.Description" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="864.016700104231,407.780001967351,80.2533333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Description" MaxLength="(100)" Name="Description" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Role.IsActive" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValue: True" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1029.0133667709,351.819901967351,60.5666666666666,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="IsActive" MaxLength="None" Name="IsActive" PropertyAccessMode="PropertyAccessMode.Default" Type="bool?" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Role.Name" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 100" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="864.016700104231,351.819901967351,51.6966666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Name" MaxLength="(100)" Name="Name" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Role.RoleId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValueSql: NEWID()" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="945.713366770897,351.820001967351,53.3,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="RoleId" MaxLength="None" Name="RoleId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Role.RoleToGroups" Category="Navigation Collection" Bounds="864.016700104231,463.740101967351,109.09,25.96" Dependent="GroupToRole" Field="" Inverse="Role" Label="RoleToGroups (*)" Name="RoleToGroups" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;GroupToRole&gt;" />
+    <Node Id="Role.RoleToPermissions" Category="Navigation Collection" Bounds="1003.10670010423,463.740101967351,132.693333333333,25.96" Dependent="RoleToPermission" Field="" Inverse="Role" Label="RoleToPermissions (*)" Name="RoleToPermissions" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;RoleToPermission&gt;" />
+    <Node Id="Role.RoleToUsers" Category="Navigation Collection" Bounds="974.270033437564,407.780001967351,99.5966666666667,25.96" Dependent="UserToRole" Field="" Inverse="Role" Label="RoleToUsers (*)" Name="RoleToUsers" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;UserToRole&gt;" />
+    <Node Id="RoleToPermission" Category="EntityType" Annotations="Relational:TableName: RoleToPermission RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="734.396700104231,67.9798519673511,251.023333333334,141.9203" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="RoleToPermission" Name="RoleToPermission" />
+    <Node Id="RoleToPermission.Permission" Category="Navigation Property" Bounds="871.540033437564,163.940051967351,93.88,25.96" Dependent="" Field="" Inverse="PermissionToRoles" Label="Permission (1)" Name="Permission" Principal="Permission" PropertyAccessMode="PropertyAccessMode.Default" Type="Permission" />
+    <Node Id="RoleToPermission.PermissionId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="754.396700104231,163.940051967351,87.1433333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="PermissionId" MaxLength="None" Name="PermissionId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="None" />
+    <Node Id="RoleToPermission.Role" Category="Navigation Property" Bounds="837.696700104231,107.979951967351,60.0366666666666,25.96" Dependent="" Field="" Inverse="RoleToPermissions" Label="Role (1)" Name="Role" Principal="Role" PropertyAccessMode="PropertyAccessMode.Default" Type="Role" />
+    <Node Id="RoleToPermission.RoleId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="754.396700104231,107.979951967351,53.3,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="RoleId" MaxLength="None" Name="RoleId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="None" />
+    <Node Id="User" Category="EntityType" Annotations="Relational:TableName: User RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="1185.85003343756,283.839801967351,340.116666666667,253.8405" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="User" Name="User" />
+    <Node Id="User.EmailAddress" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1415.13003343756,379.799951967351,90.8366666666666,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="EmailAddress" MaxLength="None" Name="EmailAddress" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="User.FirstName" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1205.85003343756,379.800001967351,73.7966666666669,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="FirstName" MaxLength="None" Name="FirstName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="User.IsActive" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValue: True" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1205.85003343756,323.839901967351,60.5666666666666,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="IsActive" MaxLength="None" Name="IsActive" PropertyAccessMode="PropertyAccessMode.Default" Type="bool?" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="User.LastName" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1395.9633667709,323.839901967351,72.6133333333332,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="LastName" MaxLength="None" Name="LastName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="User.Password" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1296.41670010423,323.839901967351,69.5466666666666,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Password" MaxLength="None" Name="Password" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="User.UserName" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1309.64670010423,379.800001967351,75.4833333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="UserName" MaxLength="None" Name="UserName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="User.UserToGroups" Category="Navigation Collection" Bounds="1335.44670010423,435.760051967351,109.836666666667,25.96" Dependent="UserToGroup" Field="" Inverse="User" Label="UserToGroups (*)" Name="UserToGroups" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;UserToGroup&gt;" />
+    <Node Id="User.UserToPermissions" Category="Navigation Collection" Bounds="1205.85003343756,491.720201967351,133.44,25.96" Dependent="UserToPermission" Field="" Inverse="User" Label="UserToPermissions (*)" Name="UserToPermissions" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;UserToPermission&gt;" />
+    <Node Id="User.UserToRoles" Category="Navigation Collection" Bounds="1205.85003343756,435.760101967351,99.5966666666666,25.96" Dependent="UserToRole" Field="" Inverse="User" Label="UserToRoles (*)" Name="UserToRoles" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;UserToRole&gt;" />
+    <Node Id="UserToGroup" Category="EntityType" Annotations="Relational:TableName: UserToGroup RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="488.028366770898,67.9798519673512,215.76,141.9203" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="UserToGroup" Name="UserToGroup" />
+    <Node Id="UserToGroup.Group" Category="Navigation Property" Bounds="508.028366770898,163.940051967351,70.2766666666666,25.96" Dependent="" Field="" Inverse="GroupToUsers" Label="Group (1)" Name="Group" Principal="Group" PropertyAccessMode="PropertyAccessMode.Default" Type="Group" />
+    <Node Id="UserToGroup.GroupId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="598.811700104231,107.980001967351,63.54,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="GroupId" MaxLength="None" Name="GroupId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="None" />
+    <Node Id="UserToGroup.User" Category="Navigation Property" Bounds="508.028366770897,107.979951967351,60.7833333333333,25.96" Dependent="" Field="" Inverse="UserToGroups" Label="User (1)" Name="User" Principal="User" PropertyAccessMode="PropertyAccessMode.Default" Type="User" />
+    <Node Id="UserToGroup.UserName" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="608.305033437564,163.940001967351,75.4833333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="UserName" MaxLength="None" Name="UserName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="UserToPermission" Category="EntityType" Annotations="Relational:TableName: UserToPermission RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="1015.77503343756,39.9998019673511,206.266666666667,197.8804" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="UserToPermission" Name="UserToPermission" />
+    <Node Id="UserToPermission.Permission" Category="Navigation Property" Bounds="1035.77503343756,191.920101967351,93.8800000000001,25.96" Dependent="" Field="" Inverse="PermissionToUsers" Label="Permission (1)" Name="Permission" Principal="Permission" PropertyAccessMode="PropertyAccessMode.Default" Type="Permission" />
+    <Node Id="UserToPermission.PermissionId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1035.77503343756,135.960001967351,87.1433333333334,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="PermissionId" MaxLength="None" Name="PermissionId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="None" />
+    <Node Id="UserToPermission.User" Category="Navigation Property" Bounds="1035.77503343756,80.0000019673511,60.7833333333333,25.96" Dependent="" Field="" Inverse="UserToPermissions" Label="User (1)" Name="User" Principal="User" PropertyAccessMode="PropertyAccessMode.Default" Type="User" />
+    <Node Id="UserToPermission.UserName" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1126.5583667709,79.9999019673511,75.4833333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="UserName" MaxLength="None" Name="UserName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="UserToRole" Category="EntityType" Annotations="" BaseClass="" Bounds="1252.77503343756,67.979851967351,206.266666666666,141.9203" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="UserToRole" Name="UserToRole" />
+    <Node Id="UserToRole.Role" Category="Navigation Property" Bounds="1356.07503343756,107.980001967351,60.0366666666666,25.96" Dependent="" Field="" Inverse="RoleToUsers" Label="Role (1)" Name="Role" Principal="Role" PropertyAccessMode="PropertyAccessMode.Default" Type="Role" />
+    <Node Id="UserToRole.RoleId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1272.77503343756,107.979951967351,53.3000000000002,25.9600000000001" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="RoleId" MaxLength="None" Name="RoleId" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" ValueGenerated="None" />
+    <Node Id="UserToRole.User" Category="Navigation Property" Bounds="1272.77503343756,163.940051967351,60.7833333333333,25.96" Dependent="" Field="" Inverse="UserToRoles" Label="User (1)" Name="User" Principal="User" PropertyAccessMode="PropertyAccessMode.Default" Type="User" />
+    <Node Id="UserToRole.UserName" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1363.5583667709,163.940001967351,75.4833333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="UserName" MaxLength="None" Name="UserName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+  </Nodes>
+  <Links>
+    <Link Source="Group" Target="Group.Description" Category="Contains" />
+    <Link Source="Group" Target="Group.GroupId" Category="Contains" />
+    <Link Source="Group" Target="Group.GroupToPermissions" Category="Contains" />
+    <Link Source="Group" Target="Group.GroupToRoles" Category="Contains" />
+    <Link Source="Group" Target="Group.GroupToUsers" Category="Contains" />
+    <Link Source="Group" Target="Group.IsActive" Category="Contains" />
+    <Link Source="Group" Target="Group.Name" Category="Contains" />
+    <Link Source="GroupToPermission" Target="Group" Category="Foreign Key" Annotations="" Bounds="181.602991154681,237.880201967351,39.9613756655094,66.2335434963341" From="GroupToPermission.GroupId" IsUnique="False" Label="1:*" LabelBounds="203.29613598825,254.003779145091,14.0733333333337,15.96" Name="GroupToPermission -&gt; Group" To="Group.GroupId" />
+    <Link Source="GroupToPermission" Target="GroupToPermission.Group" Category="Contains" />
+    <Link Source="GroupToPermission" Target="GroupToPermission.GroupId" Category="Contains" />
+    <Link Source="GroupToPermission" Target="GroupToPermission.Permission" Category="Contains" />
+    <Link Source="GroupToPermission" Target="GroupToPermission.PermissionId" Category="Contains" />
+    <Link Source="GroupToPermission" Target="Permission" Category="Foreign Key" Annotations="" Bounds="223.816696166992,200.846420288086,246.156509399414,108.59733581543" From="GroupToPermission.PermissionId" IsUnique="False" Label="1:*" LabelBounds="301.982097814332,257.825892918613,14.0733333333337,15.96" Name="GroupToPermission -&gt; Permission" To="Permission.PermissionId" />
+    <Link Source="GroupToRole" Target="Group" Category="Foreign Key" Annotations="" Bounds="313.632259482939,209.900151967351,24.0022109595058,93.2040140430409" From="GroupToRole.GroupId" IsUnique="False" Label="1:*" LabelBounds="330.38549581354,246.108306853428,14.0733333333337,15.96" Name="GroupToRole -&gt; Group" To="Group.GroupId" />
+    <Link Source="GroupToRole" Target="GroupToRole.Group" Category="Contains" />
+    <Link Source="GroupToRole" Target="GroupToRole.GroupId" Category="Contains" />
+    <Link Source="GroupToRole" Target="GroupToRole.Role" Category="Contains" />
+    <Link Source="GroupToRole" Target="GroupToRole.RoleId" Category="Contains" />
+    <Link Source="GroupToRole" Target="Role" Category="Foreign Key" Annotations="" Bounds="457.290435791016,207.133010864258,408.628997802734,99.1583404541016" From="GroupToRole.RoleId" IsUnique="False" Label="1:*" LabelBounds="572.496327322149,216.245617595403,14.0733333333337,15.96" Name="GroupToRole -&gt; Role" To="Role.RoleId" />
+    <Link Source="IModel" Target="Group" Category="Contains" />
+    <Link Source="IModel" Target="GroupToPermission" Category="Contains" />
+    <Link Source="IModel" Target="GroupToRole" Category="Contains" />
+    <Link Source="IModel" Target="Permission" Category="Contains" />
+    <Link Source="IModel" Target="Role" Category="Contains" />
+    <Link Source="IModel" Target="RoleToPermission" Category="Contains" />
+    <Link Source="IModel" Target="User" Category="Contains" />
+    <Link Source="IModel" Target="UserToGroup" Category="Contains" />
+    <Link Source="IModel" Target="UserToPermission" Category="Contains" />
+    <Link Source="IModel" Target="UserToRole" Category="Contains" />
+    <Link Source="Permission" Target="Permission.Description" Category="Contains" />
+    <Link Source="Permission" Target="Permission.IsActive" Category="Contains" />
+    <Link Source="Permission" Target="Permission.Name" Category="Contains" />
+    <Link Source="Permission" Target="Permission.Namespace" Category="Contains" />
+    <Link Source="Permission" Target="Permission.PermissionId" Category="Contains" />
+    <Link Source="Permission" Target="Permission.PermissionToGroups" Category="Contains" />
+    <Link Source="Permission" Target="Permission.PermissionToRoles" Category="Contains" />
+    <Link Source="Permission" Target="Permission.PermissionToUsers" Category="Contains" />
+    <Link Source="Role" Target="Role.Description" Category="Contains" />
+    <Link Source="Role" Target="Role.IsActive" Category="Contains" />
+    <Link Source="Role" Target="Role.Name" Category="Contains" />
+    <Link Source="Role" Target="Role.RoleId" Category="Contains" />
+    <Link Source="Role" Target="Role.RoleToGroups" Category="Contains" />
+    <Link Source="Role" Target="Role.RoleToPermissions" Category="Contains" />
+    <Link Source="Role" Target="Role.RoleToUsers" Category="Contains" />
+    <Link Source="RoleToPermission" Target="Permission" Category="Foreign Key" Annotations="" Bounds="751.398108100055,209.900151967351,52.6443573144116,66.8681861561741" From="RoleToPermission.PermissionId" IsUnique="False" Label="1:*" LabelBounds="779.291723167,244.571414237645,14.0733333333337,15.9600000000001" Name="RoleToPermission -&gt; Permission" To="Permission.PermissionId" />
+    <Link Source="RoleToPermission" Target="Role" Category="Foreign Key" Annotations="" Bounds="896.456159427803,209.900151967351,48.372434972103,93.9185376722642" From="RoleToPermission.RoleId" IsUnique="False" Label="1:*" LabelBounds="907.814295804558,263.645095336337,14.0733333333337,15.96" Name="RoleToPermission -&gt; Role" To="Role.RoleId" />
+    <Link Source="RoleToPermission" Target="RoleToPermission.Permission" Category="Contains" />
+    <Link Source="RoleToPermission" Target="RoleToPermission.PermissionId" Category="Contains" />
+    <Link Source="RoleToPermission" Target="RoleToPermission.Role" Category="Contains" />
+    <Link Source="RoleToPermission" Target="RoleToPermission.RoleId" Category="Contains" />
+    <Link Source="User" Target="User.EmailAddress" Category="Contains" />
+    <Link Source="User" Target="User.FirstName" Category="Contains" />
+    <Link Source="User" Target="User.IsActive" Category="Contains" />
+    <Link Source="User" Target="User.LastName" Category="Contains" />
+    <Link Source="User" Target="User.Password" Category="Contains" />
+    <Link Source="User" Target="User.UserName" Category="Contains" />
+    <Link Source="User" Target="User.UserToGroups" Category="Contains" />
+    <Link Source="User" Target="User.UserToPermissions" Category="Contains" />
+    <Link Source="User" Target="User.UserToRoles" Category="Contains" />
+    <Link Source="UserToGroup" Target="Group" Category="Foreign Key" Annotations="" Bounds="405.512786869808,209.900151967351,109.468324732228,95.9860646087555" From="UserToGroup.GroupId" IsUnique="False" Label="1:*" LabelBounds="461.56552376731,259.396966571524,14.0733333333337,15.96" Name="UserToGroup -&gt; Group" To="Group.GroupId" />
+    <Link Source="UserToGroup" Target="User" Category="Foreign Key" Annotations="" Bounds="703.093383789063,207.443161010742,478.764526367188,71.6379547119141" From="UserToGroup.UserName" IsUnique="False" Label="1:*" LabelBounds="796.896144905211,234.057609085188,14.0733333333337,15.96" Name="UserToGroup -&gt; User" To="User.UserName" />
+    <Link Source="UserToGroup" Target="UserToGroup.Group" Category="Contains" />
+    <Link Source="UserToGroup" Target="UserToGroup.GroupId" Category="Contains" />
+    <Link Source="UserToGroup" Target="UserToGroup.User" Category="Contains" />
+    <Link Source="UserToGroup" Target="UserToGroup.UserName" Category="Contains" />
+    <Link Source="UserToPermission" Target="Permission" Category="Foreign Key" Annotations="" Bounds="821.778294563431,198.207883200614,193.996738874133,111.484573489649" From="UserToPermission.PermissionId" IsUnique="False" Label="1:*" LabelBounds="925.835577396585,252.200335051857,14.0733333333337,15.96" Name="UserToPermission -&gt; Permission" To="Permission.PermissionId" />
+    <Link Source="UserToPermission" Target="User" Category="Foreign Key" Annotations="" Bounds="1205.17436296949,237.880201967351,34.1575684983106,39.1759999033302" From="UserToPermission.UserName" IsUnique="False" Label="1:*" LabelBounds="1223.76061390679,240.193841167882,14.0733333333319,15.96" Name="UserToPermission -&gt; User" To="User.UserName" />
+    <Link Source="UserToPermission" Target="UserToPermission.Permission" Category="Contains" />
+    <Link Source="UserToPermission" Target="UserToPermission.PermissionId" Category="Contains" />
+    <Link Source="UserToPermission" Target="UserToPermission.User" Category="Contains" />
+    <Link Source="UserToPermission" Target="UserToPermission.UserName" Category="Contains" />
+    <Link Source="UserToRole" Target="Role" Category="Foreign Key" Annotations="" Bounds="1136.64262580889,209.900151967351,126.329925348738,96.4578660345338" From="UserToRole.RoleId" IsUnique="False" Label="1:*" LabelBounds="1201.02131825336,259.718695013891,14.0733333333319,15.96" Name="UserToRole -&gt; Role" To="Role.RoleId" />
+    <Link Source="UserToRole" Target="User" Category="Foreign Key" Annotations="" Bounds="1355.9083667709,209.900151967351,2.27373675443232E-13,64.93965" From="UserToRole.UserName" IsUnique="False" Label="1:*" LabelBounds="1359.9083667709,234.389976967351,14.0733333333337,15.96" Name="UserToRole -&gt; User" To="User.UserName" />
+    <Link Source="UserToRole" Target="UserToRole.Role" Category="Contains" />
+    <Link Source="UserToRole" Target="UserToRole.RoleId" Category="Contains" />
+    <Link Source="UserToRole" Target="UserToRole.User" Category="Contains" />
+    <Link Source="UserToRole" Target="UserToRole.UserName" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="EntityType" />
+    <Category Id="Foreign Key" />
+    <Category Id="Model" />
+    <Category Id="Navigation Collection" />
+    <Category Id="Navigation Property" />
+    <Category Id="Property Optional" />
+    <Category Id="Property Primary" />
+    <Category Id="Property Required" />
+  </Categories>
+  <Properties>
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass" Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Field" Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsAbstract" Label="IsAbstract" Description="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="MaxLength" DataType="System.String" />
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type" Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>
