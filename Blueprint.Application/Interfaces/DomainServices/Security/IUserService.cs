@@ -1,5 +1,5 @@
 ﻿using Blueprint.Application.Models.Security;
-using Blueprint.Application.Result;
+using Blueprint.Application.Models.Result;
 
 namespace Blueprint.Application.Interfaces.DomainServices.Security
 {

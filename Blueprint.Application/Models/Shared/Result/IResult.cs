@@ -1,4 +1,4 @@
-﻿namespace Blueprint.Application.Result
+﻿namespace Blueprint.Application.Models.Result
 {
     public interface IResult
     {

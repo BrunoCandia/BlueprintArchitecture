@@ -1,6 +1,6 @@
 ﻿using Blueprint.Application.Interfaces.DomainServices.Security;
 using Blueprint.Application.Models.Security;
-using Blueprint.Application.Result;
+using Blueprint.Application.Models.Result;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blueprint.WebApi.Controllers

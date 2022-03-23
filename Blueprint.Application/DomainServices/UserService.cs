@@ -1,7 +1,7 @@
 ﻿using Blueprint.Application.Interfaces.DomainServices.Security;
 using Blueprint.Application.Interfaces.Repositories.Security;
 using Blueprint.Application.Models.Security;
-using Blueprint.Application.Result;
+using Blueprint.Application.Models.Result;
 
 namespace Blueprint.Application.DomainServices
 {
